@@ -22,4 +22,24 @@ public class MainActivity extends AppCompatActivity {
         etEdad = findViewById(R.id.etEdad);
         btnRegistrar = findViewById(R.id.btnRegistrar);
         tvResultado = findViewById(R.id.tvResultado);
+        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                String nombre = etNombre.getText().toString();
+                String apellidos = etApellidos.getText().toString();
+                String edad = etEdad.getText().toString();
+
+                if(nombre.isEmpty() || apellidos.isEmpty() || edad.isEmpty()){
+                    tvResultado.setText("Por favor complete todos los campos");
+                } else {
+                    tvResultado.setText("Estudiante registrado:\n"
+                            + "Nombre: " + nombre + "\n"
+                            + "Apellidos: " + apellidos + "\n"
+                            + "Edad: " + edad);
+                }
+            }
+        });
+    }
+}
 
