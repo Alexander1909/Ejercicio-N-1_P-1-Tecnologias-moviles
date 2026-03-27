@@ -14,3 +14,9 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginBottom="20dp"/>
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre"
+        android:inputType="textPersonName"/>
